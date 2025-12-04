@@ -1,3 +1,31 @@
+<div align="center">
+
+# 🟨⚠️ <span style="font-size:2.2em;">**DEPRECATED PROJECT**</span> ⚠️🟨
+
+---
+
+### 🚧 This repository is no longer maintained.
+
+Please use the new active repository instead:  
+👉 [**client-protector**](https://github.com/sysnormal1/java-spring-sso-client-protector.git)
+
+---
+
+![status: deprecated](https://img.shields.io/badge/status-deprecated-red?style=for-the-badge)
+![maintenance: no](https://img.shields.io/badge/maintenance-no-lightgrey?style=for-the-badge)
+
+</div>
+
+---
+
+## 📝 About
+
+This project has been **deprecated** and will not receive further updates or support.  
+All future development and maintenance have been moved to the repository linked above.
+
+If you are using this code in production, please migrate as soon as possible.
+
+---
 # Base Server SSO Client Security Configuration
 
 This library provides a Spring Security configuration for integrating Single Sign-On (SSO) authentication into your Spring Boot application. It includes a base security configuration and a filter to validate JWT tokens against an SSO server, ensuring secure access to protected endpoints.
@@ -106,7 +134,7 @@ public CorsConfigurationSource corsConfigurationSource() {
     - Allows unauthenticated access to public endpoints specified in `app.security.public-endpoints`.
     - Requires authentication for all other endpoints using a JWT token.
 
-2. **SSO Authentication Filter**: The `BaseSsoAuthenticationFilterCheck` filter:
+2. **SSO Authentication Filter**: The `SsoClientProtectorService` filter:
     - Checks if the requested endpoint is public. If it is, the request proceeds without authentication.
     - For non-public endpoints, extracts the JWT token from the `Authorization` header (expected format: `Bearer <token>`).
     - Sends the token to the SSO server's `check-token-endpoint` for validation.
